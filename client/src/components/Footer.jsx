@@ -3,7 +3,6 @@ import {
   Github, 
   Instagram, 
   Mail, 
-  Heart,
   Code2 
 } from 'lucide-react';
 
@@ -67,11 +66,8 @@ const Footer = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="flex items-center gap-1"
             >
-              © {currentYear} DevPortfolio. Made with
-              <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" />
-              by Ahmad Ali
+              © {currentYear} Ahmad Ali. All rights reserved.
             </motion.p>
 
             <motion.p
@@ -80,7 +76,7 @@ const Footer = () => {
               viewport={{ once: true }}
               className="text-text-dark"
             >
-              Built with React, Node.js & MongoDB
+              Built with React & Tailwind CSS
             </motion.p>
           </div>
         </div>
