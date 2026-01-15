@@ -162,7 +162,6 @@ const Navbar = () => {
 
               {/* Navigation Links */}
               <nav className="p-4">
-                <p className="text-xs text-text-dark uppercase tracking-wider mb-4 px-3">Navigation</p>
                 <div className="space-y-1">
                   {navLinks.map((link, index) => (
                     <motion.button
