@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Menu, X, Code2, Home, User, Wrench, FolderOpen, Briefcase, Mail, ArrowRight } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '#home', icon: Home },
+  { name: 'About', href: '#about', icon: User },
+  { name: 'Skills', href: '#skills', icon: Wrench },
+  { name: 'Projects', href: '#projects', icon: FolderOpen },
+  { name: 'Experience', href: '#experience', icon: Briefcase },
+  { name: 'Contact', href: '#contact', icon: Mail },
 ];
 
 const Navbar = () => {
@@ -125,62 +125,81 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Navigation - Full Screen Overlay */}
+      {/* Mobile Navigation - Slide-in Sidebar */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            className="fixed inset-0 z-40 md:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
+          <>
             {/* Backdrop */}
             <motion.div
-              className="absolute inset-0 bg-background/95 backdrop-blur-lg"
+              className="fixed inset-0 z-40 md:hidden bg-black/60 backdrop-blur-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
               onClick={() => setIsOpen(false)}
             />
             
-            {/* Menu Content */}
-            <motion.nav
-              className="relative h-full flex flex-col items-center justify-center gap-6 p-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ delay: 0.1 }}
+            {/* Sidebar */}
+            <motion.div
+              className="fixed top-0 right-0 z-40 md:hidden h-full w-[280px] bg-background-light/95 backdrop-blur-xl border-l border-white/10 shadow-2xl"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             >
-              {navLinks.map((link, index) => (
+              {/* Sidebar Header */}
+              <div className="p-6 border-b border-white/10">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-primary/20 rounded-xl">
+                    <Code2 className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-text">Ahmad Ali</p>
+                    <p className="text-xs text-text-muted">Full-Stack Developer</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Navigation Links */}
+              <nav className="p-4">
+                <p className="text-xs text-text-dark uppercase tracking-wider mb-4 px-3">Navigation</p>
+                <div className="space-y-1">
+                  {navLinks.map((link, index) => (
+                    <motion.button
+                      key={link.name}
+                      onClick={() => handleNavClick(link.href)}
+                      className="w-full flex items-center gap-4 px-4 py-3 rounded-xl text-text-muted hover:text-text hover:bg-white/5 transition-all duration-200 group"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 + index * 0.05 }}
+                    >
+                      <link.icon className="w-5 h-5 text-primary/70 group-hover:text-primary transition-colors" />
+                      <span className="font-medium">{link.name}</span>
+                      <ArrowRight className="w-4 h-4 ml-auto opacity-0 -translate-x-2 group-hover:opacity-50 group-hover:translate-x-0 transition-all" />
+                    </motion.button>
+                  ))}
+                </div>
+              </nav>
+
+              {/* Sidebar Footer */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10">
                 <motion.button
-                  key={link.name}
-                  onClick={() => handleNavClick(link.href)}
-                  className="text-2xl font-semibold text-text hover:text-primary transition-colors"
+                  onClick={() => handleNavClick('#contact')}
+                  className="w-full py-3 px-4 bg-gradient-to-r from-primary to-secondary rounded-xl font-semibold text-background hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  transition={{ delay: 0.1 + index * 0.05 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
+                  transition={{ delay: 0.4 }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  {link.name}
+                  Let's Work Together
                 </motion.button>
-              ))}
-              
-              {/* CTA Button in mobile menu */}
-              <motion.button
-                onClick={() => handleNavClick('#contact')}
-                className="mt-4 btn-primary"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ delay: 0.4 }}
-              >
-                Let's Talk
-              </motion.button>
-            </motion.nav>
-          </motion.div>
+                <p className="text-center text-xs text-text-dark mt-4">
+                  © 2026 Ahmad Ali
+                </p>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.header>
