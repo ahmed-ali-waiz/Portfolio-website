@@ -154,7 +154,7 @@ const Navbar = () => {
                     <Code2 className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-text">Ahmad Ali</p>
+                    <p className="font-bold text-text">Your Name</p>
                     <p className="text-xs text-text-muted">Full-Stack Developer</p>
                   </div>
                 </div>
@@ -194,7 +194,7 @@ const Navbar = () => {
                   Let's Work Together
                 </motion.button>
                 <p className="text-center text-xs text-text-dark mt-4">
-                  © 2026 Ahmad Ali
+                  © 2026 Your Name
                 </p>
               </div>
             </motion.div>

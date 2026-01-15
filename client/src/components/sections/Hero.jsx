@@ -132,7 +132,7 @@ const Hero = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4"
           >
             Hi, I'm{' '}
-            <span className="gradient-text">Ahmad Ali</span>
+            <span className="gradient-text">Your Name</span>
           </motion.h1>
 
           {/* Typewriter role */}

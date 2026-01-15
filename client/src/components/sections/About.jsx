@@ -16,9 +16,9 @@ const About = () => {
   ];
 
   const personalInfo = [
-    { icon: User, label: 'Name', value: 'Ahmad Ali' },
-    { icon: Calendar, label: 'Experience', value: '2+ Years' },
-    { icon: MapPin, label: 'Location', value: 'Fareed Town, Sahiwal' },
+    { icon: User, label: 'Name', value: 'Your Name' },
+    { icon: Calendar, label: 'Experience', value: 'X+ Years' },
+    { icon: MapPin, label: 'Location', value: 'Your City, Country' },
     { icon: Briefcase, label: 'Status', value: 'Open to Work' },
   ];
 

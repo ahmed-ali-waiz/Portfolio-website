@@ -7,9 +7,9 @@ import {
 } from 'lucide-react';
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com/ahmed-ali-waiz' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ahmad_ali_w2' },
-  { name: 'Email', icon: Mail, href: 'mailto:ahmadaliwattoo2004@gmail.com' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/yourusername' },
+  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/yourusername' },
+  { name: 'Email', icon: Mail, href: 'mailto:your.email@example.com' },
 ];
 
 const Footer = () => {
@@ -67,7 +67,7 @@ const Footer = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              © {currentYear} Ahmad Ali. All rights reserved.
+              © {currentYear} Your Name. All rights reserved.
             </motion.p>
 
             <motion.p

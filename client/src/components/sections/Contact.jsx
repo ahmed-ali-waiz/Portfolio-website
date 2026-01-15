@@ -28,14 +28,14 @@ const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS tem
 const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';   // Replace with your EmailJS public key
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'ahmadaliwattoo2004@gmail.com', href: 'mailto:ahmadaliwattoo2004@gmail.com' },
-  { icon: Phone, label: 'Phone', value: '+92 301 0888825', href: 'tel:+923010888825' },
-  { icon: MapPin, label: 'Location', value: 'Fareed Town, Sahiwal', href: null },
+  { icon: Mail, label: 'Email', value: 'your.email@example.com', href: 'mailto:your.email@example.com' },
+  { icon: Phone, label: 'Phone', value: '+1 234 567 8900', href: 'tel:+12345678900' },
+  { icon: MapPin, label: 'Location', value: 'Your City, Country', href: null },
 ];
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com/ahmed-ali-waiz', label: 'GitHub' },
-  { icon: Instagram, href: 'https://instagram.com/ahmad_ali_w2', label: 'Instagram' },
+  { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
+  { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' },
 ];
 
 const Contact = () => {
