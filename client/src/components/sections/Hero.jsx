@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Download, Send, Github } from 'lucide-react';
+import { ArrowDown, Download, Send, Github, Instagram } from 'lucide-react';
 
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState('');
-  const roles = ['Full-Stack Developer', 'MERN Stack Developer', 'Problem Solver'];
+  const roles = ['Full-Stack Developer', 'MERN Stack Developer', 'Python Developer', 'Problem Solver'];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -132,7 +132,7 @@ const Hero = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4"
           >
             Hi, I'm{' '}
-            <span className="gradient-text">Your Name</span>
+            <span className="gradient-text">Ahmad Ali</span>
           </motion.h1>
 
           {/* Typewriter role */}
@@ -151,8 +151,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-lg md:text-xl text-text-muted max-w-2xl mx-auto mb-8 leading-relaxed"
           >
-            Passionate MERN Stack Developer crafting seamless web experiences. 
-            I turn ideas into elegant, high-performance applications with clean code and intuitive design.
+            I am Ahmad Ali. I love solving challenging problems, especially in math and algorithms. I’m always curious and eager to learn new fundamentals, and I enjoy building efficient, high-quality solutions with modern technologies.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -195,12 +194,22 @@ const Hero = () => {
             >
               <Github className="w-6 h-6" />
             </motion.a>
+            <motion.a
+              href="https://instagram.com/ahmad_ali_w2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 glass-card hover:border-primary/50 transition-all duration-300"
+              whileHover={{ scale: 1.1, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Instagram className="w-6 h-6" />
+            </motion.a>
           </motion.div>
         </motion.div>
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="w-full flex justify-center absolute bottom-8 left-0"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 0.5 }}

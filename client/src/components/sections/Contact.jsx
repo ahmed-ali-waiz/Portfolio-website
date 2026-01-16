@@ -28,14 +28,14 @@ const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS tem
 const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';   // Replace with your EmailJS public key
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'your.email@example.com', href: 'mailto:your.email@example.com' },
-  { icon: Phone, label: 'Phone', value: '+1 234 567 8900', href: 'tel:+12345678900' },
-  { icon: MapPin, label: 'Location', value: 'Your City, Country', href: null },
+  { icon: Mail, label: 'Email', value: 'ahmadaliwattoo2004@gmail.com', href: 'mailto:ahmadaliwattoo2004@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '03010888825', href: 'tel:03010888825' },
+  { icon: MapPin, label: 'Location', value: 'Fareed town sahiwal', href: null },
 ];
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
-  { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' },
+  { icon: Instagram, href: 'https://instagram.com/ahmad_ali_w2', label: 'Instagram' },
 ];
 
 const Contact = () => {
@@ -63,38 +63,14 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus({ type: '', message: '' });
-
-    try {
-      // EmailJS template parameters
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-      };
-
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY
-      );
-
+    setTimeout(() => {
       setStatus({
-        type: 'success',
-        message: 'Message sent successfully! I will get back to you soon.',
+        type: 'error',
+        message: 'Backend will implement soon',
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      console.error('EmailJS error:', error);
-      setStatus({ 
-        type: 'error', 
-        message: 'Failed to send message. Please try again or contact me directly via email.' 
-      });
-    } finally {
       setIsSubmitting(false);
       setTimeout(() => setStatus({ type: '', message: '' }), 5000);
-    }
+    }, 1000);
   };
 
   const containerVariants = {
@@ -219,7 +195,7 @@ const Contact = () => {
                     <label className="block text-sm font-medium mb-2" htmlFor="name">
                       <span className="flex items-center gap-2">
                         <User className="w-4 h-4 text-primary" />
-                        Your Name
+                        Ahmad Ali
                       </span>
                     </label>
                     <input
@@ -230,7 +206,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="input-field"
-                      placeholder="Your name"
+                      placeholder="Ahmad Ali"
                     />
                   </div>
 

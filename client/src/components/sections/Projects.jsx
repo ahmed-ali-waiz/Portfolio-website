@@ -4,70 +4,76 @@ import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Github, Folder, Star } from 'lucide-react';
 
 const projects = [
+  // Deployed Project 1
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce platform with payment integration, admin dashboard, and real-time inventory management.',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    category: 'fullstack',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    title: 'Apex Driving School',
+    description: 'A modern website for Apex Driving School, featuring course details, instructor profiles, and an online contact form for easy enrollment.',
+    image: 'https://github.com/ahmed-ali-waiz/Driving-School/blob/master/assets/graduate1.jpg?raw=true',
+    tags: ['React', 'Tailwind', 'Netlify'],
+    category: 'frontend',
+    liveUrl: 'https://apex-driving.netlify.app',
+    githubUrl: 'https://github.com/ahmed-ali-waiz/Driving-School',
     featured: true,
   },
+  // Deployed Project 2
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'Collaborative task management tool with real-time updates, drag-and-drop interface, and team collaboration features.',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-    tags: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
-    category: 'fullstack',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    title: 'Image-slider',
+    description: 'A visually engaging CSS-only image slider with a 3D carousel effect. Built for web design inspiration and creative UI showcases.',
+    image: '/image-slider.png',
+    tags: ['HTML', 'CSS', 'Web Design'],
+    category: 'frontend',
+    liveUrl: 'https://ahmed-ali-waiz.github.io/Image-slider.io/',
+    githubUrl: 'https://github.com/ahmed-ali-waiz/Image-slider.io',
     featured: true,
   },
+  // Code Project 1
   {
     id: 3,
-    title: 'AI Chat Application',
-    description: 'Real-time chat application with AI-powered responses, message encryption, and file sharing capabilities.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
-    tags: ['React', 'Socket.io', 'OpenAI', 'Express'],
+    title: 'Pizza-Management-System',
+    description: 'A comprehensive Pizza Management System Admin Panel built as a Web Technologies course project. Features order management, inventory tracking, analytics dashboard, and payment processing.',
+    image: '/pizza-img.png',
+    tags: ['React', 'Node.js', 'MongoDB', 'Admin Panel'],
     category: 'fullstack',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
-    featured: true,
+    liveUrl: '',
+    githubUrl: 'https://github.com/ahmed-ali-waiz/Pizza-Management-System',
+    featured: false,
   },
+  // Code Project 2
   {
     id: 4,
-    title: 'Portfolio Dashboard',
-    description: 'Investment portfolio tracker with real-time stock data, analytics, and performance visualization.',
-    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop',
-    tags: ['React', 'D3.js', 'Node.js', 'API'],
-    category: 'frontend',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    title: 'Chatting Application',
+    description: 'A full-stack real-time chat application built with the MERN stack (MongoDB, Express, React, Node.js). It features secure user authentication, smooth real-time messaging, online user status, and a modern, responsive UI designed for scalability and production use.',
+    image: 'https://tse2.mm.bing.net/th/id/OIP.ReCk6ngfPiRE_KwdUzH6ZQHaE0?rs=1&pid=ImgDetMain&o=7&rm=3',
+    tags: ['MERN', 'Socket.io', 'Real-time', 'Authentication'],
+    category: 'fullstack',
+    liveUrl: '',
+    githubUrl: 'https://github.com/ahmed-ali-waiz/Mern-Chatt-App',
     featured: false,
   },
+  // Dummy Project 1
   {
     id: 5,
-    title: 'REST API Service',
-    description: 'Scalable RESTful API with authentication, rate limiting, and comprehensive documentation.',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop',
-    tags: ['Node.js', 'Express', 'MongoDB', 'JWT'],
-    category: 'backend',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    title: 'Demo Project One',
+    description: 'This is a placeholder demo project to showcase layout and design. Replace with your own project details.',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop',
+    tags: ['Demo', 'Template'],
+    category: 'frontend',
+    liveUrl: '',
+    githubUrl: '',
     featured: false,
   },
+  // Dummy Project 2
   {
     id: 6,
-    title: 'Weather Dashboard',
-    description: 'Beautiful weather application with location-based forecasts, interactive maps, and weather alerts.',
-    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
-    tags: ['React', 'Tailwind', 'Weather API', 'Geolocation'],
+    title: 'Demo Project Two',
+    description: 'Another example of a dummy project card. Use this slot for future work or experiments.',
+    image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&h=400&fit=crop',
+    tags: ['Demo', 'Experiment'],
     category: 'frontend',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com',
+    liveUrl: '',
+    githubUrl: '',
     featured: false,
   },
 ];
@@ -200,26 +206,30 @@ const Projects = () => {
                       className="absolute inset-0 flex items-center justify-center gap-4 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       initial={false}
                     >
-                      <motion.a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 glass-card hover:bg-primary hover:border-primary transition-all duration-300"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                      </motion.a>
-                      <motion.a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 glass-card hover:bg-primary hover:border-primary transition-all duration-300"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Github className="w-5 h-5" />
-                      </motion.a>
+                      {project.liveUrl && (
+                        <motion.a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 glass-card hover:bg-primary hover:border-primary transition-all duration-300"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <ExternalLink className="w-5 h-5" />
+                        </motion.a>
+                      )}
+                      {project.githubUrl && (
+                        <motion.a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-3 glass-card hover:bg-primary hover:border-primary transition-all duration-300"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <Github className="w-5 h-5" />
+                        </motion.a>
+                      )}
                     </motion.div>
                   </div>
 

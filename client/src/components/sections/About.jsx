@@ -16,9 +16,9 @@ const About = () => {
   ];
 
   const personalInfo = [
-    { icon: User, label: 'Name', value: 'Your Name' },
-    { icon: Calendar, label: 'Experience', value: 'X+ Years' },
-    { icon: MapPin, label: 'Location', value: 'Your City, Country' },
+    { icon: User, label: 'Name', value: 'Ahmad Ali' },
+    { icon: Calendar, label: 'Experience', value: '2+ Years' },
+    { icon: MapPin, label: 'Location', value: 'Sahiwal, Pakistan' },
     { icon: Briefcase, label: 'Status', value: 'Open to Work' },
   ];
 
@@ -122,10 +122,7 @@ const About = () => {
                   <span className="gradient-text">digital experiences</span>
                 </h3>
                 <p className="text-text-muted leading-relaxed">
-                  I'm a Full-Stack Developer with 2+ years of hands-on experience 
-                  building modern web applications. My expertise lies in the MERN stack 
-                  — MongoDB, Express.js, React, and Node.js — where I create fast, 
-                  scalable, and user-centric solutions.
+                  I'm a Full-Stack Developer with 2+ years of hands-on experience building modern web applications. My expertise lies in the MERN stack and Python, where I create fast, scalable, and user-centric solutions. Based in Sahiwal, Pakistan.
                 </p>
                 <p className="text-text-muted leading-relaxed">
                   I have a genuine curiosity for learning and constantly push myself 

@@ -21,7 +21,7 @@ const Loader = () => {
     })
   };
 
-  const name = "PORTFOLIO";
+  const name = "Ahmad Ali";
 
   return (
     <motion.div

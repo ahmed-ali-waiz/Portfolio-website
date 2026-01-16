@@ -70,7 +70,7 @@ const Navbar = () => {
             onClick={() => setIsOpen(false)}
           >
             <Code2 className="w-6 h-6 md:w-8 md:h-8 text-primary" />
-            <span className="gradient-text">DevPortfolio</span>
+            <span className="gradient-text">Ahmad Ali</span>
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -154,7 +154,7 @@ const Navbar = () => {
                     <Code2 className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-text">Your Name</p>
+                    <p className="font-bold text-text">Ahmad Ali</p>
                     <p className="text-xs text-text-muted">Full-Stack Developer</p>
                   </div>
                 </div>
@@ -194,7 +194,7 @@ const Navbar = () => {
                   Let's Work Together
                 </motion.button>
                 <p className="text-center text-xs text-text-dark mt-4">
-                  © 2026 Your Name
+                  © 2026 Ahmad Ali
                 </p>
               </div>
             </motion.div>

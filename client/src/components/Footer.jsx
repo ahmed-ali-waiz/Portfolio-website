@@ -31,7 +31,7 @@ const Footer = () => {
               whileHover={{ scale: 1.05 }}
             >
               <Code2 className="w-8 h-8 text-primary" />
-              <span className="gradient-text">DevPortfolio</span>
+              <span className="gradient-text">Ahmad Ali</span>
             </motion.a>
 
             {/* Social Links */}
@@ -67,7 +67,7 @@ const Footer = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              © {currentYear} Your Name. All rights reserved.
+              © {currentYear} Ahmad Ali. All rights reserved.
             </motion.p>
 
             <motion.p
