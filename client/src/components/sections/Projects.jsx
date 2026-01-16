@@ -12,7 +12,7 @@ const projects = [
     image: 'https://github.com/ahmed-ali-waiz/Driving-School/blob/master/assets/graduate1.jpg?raw=true',
     tags: ['React', 'Tailwind', 'Netlify'],
     category: 'frontend',
-    liveUrl: 'https://apex-driving.netlify.app',
+    liveUrl: 'https://apexx-driving.netlify.app',
     githubUrl: 'https://github.com/ahmed-ali-waiz/Driving-School',
     featured: true,
   },
